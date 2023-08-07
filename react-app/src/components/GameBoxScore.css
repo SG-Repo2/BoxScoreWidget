@@ -1,0 +1,169 @@
+:root {
+    --primary-color: #007BFF;
+    --secondary-color: #0056b3;
+    --background-color: #f8f9fa; 
+    --text-color: #343a40; 
+}
+
+body, h1, h2, h3, th, td {
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.game-boxscore {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--background-color);
+    padding: 20px;
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+.scores-table, .player-stats-table {
+    width: 100%;
+    margin: 20px 0;
+    border-collapse: collapse;
+    border: 2px solid #333;
+    transition: all 0.3s ease;
+}
+
+.scores-table th, .scores-table td, .player-stats-table th, .player-stats-table td {
+    border: 2px solid #333;
+    padding: 8px;
+    text-align: center;
+}
+
+.scores-table tbody tr:nth-child(odd) {
+    background-color: #f7f7f7;
+}
+
+.player-stats-table th:nth-child(1) {
+    width: 250px;
+}
+
+.teams-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 20px;
+}
+
+.team-stats {
+    flex: 1;
+    padding: 0;
+    margin: 0;
+    border: 1px solid #333;
+    box-sizing: border-box;
+}
+
+.game-progress {
+    font-weight: bold;
+    margin: 10px;
+}
+
+select {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    appearance: none;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+select:hover {
+    border-color: #888;
+}
+
+select:focus {
+    border-color: var(--text-color);
+    outline: none;
+}
+
+button {
+    background-color: var(--primary-color);
+    color: #FFF;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--secondary-color);
+}
+
+button:active, select:active {
+    transform: scale(0.98);
+}
+
+.pitching-stats-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.player-name {
+    font-size: 0.6em;
+}
+
+div {
+    margin-bottom: 20px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+th {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .game-boxscore {
+        width: 100%; 
+        padding: 1rem; 
+    }
+
+    th, td {
+        font-size: 1rem;  
+        padding: 0.5rem;  
+    }
+}
+
+.game-progress {
+    margin: 1vh 1vw; 
+}
+
+.pitching-stats-container {
+    margin-top: 2vh;
+}
+
+.game-boxscore {
+    max-height: 90vh; 
+    overflow-y: auto;
+}
+
+@media (min-aspect-ratio: 9/16) {
+    .game-boxscore {
+        width: 95%;
+        padding: 2vh; 
+    }
+
+    th, td {
+        padding: 0.5rem 1rem; 
+    }
+}
